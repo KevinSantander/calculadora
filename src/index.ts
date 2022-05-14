@@ -5,20 +5,23 @@ btnSend?.addEventListener("click", () => {
   let sNumero = Number(dato2.value);
   let tNumero = Number(dato3.value);
 
-  function guiones() {
-    let i: number;
-    let guiones: string = "-";
-    for (i = 0; i <= 40; i++) {
-      guiones = guiones + "-";
+  function dibujarGuiones() {
+    let guion: string = "-";
+    for (let i = 0; i <= 40; i++) {
+      guion = guion + "-";
     }
+    console.log(guion);
   }
 
-  console.log(guiones);
   if (tNumero === 1) {
-    console.log(pNumero + sNumero);
+    dibujarGuiones();
+    console.log(" El resultado de la operacion es: ", pNumero + sNumero);
+    dibujarGuiones();
   } else {
     if (tNumero === 2) {
-      console.log(pNumero - sNumero);
+      dibujarGuiones();
+      console.log(" El resultado de la operacion es: ", pNumero - sNumero);
+      dibujarGuiones();
     } else console.log("Fin del algoritmo");
   }
 });
